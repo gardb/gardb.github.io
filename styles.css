@@ -1,0 +1,16 @@
+/* Body styles */
+body {
+    background-color: black; /* Black background */
+    color: white; /* White text color */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full height of the viewport */
+    font-family: 'Courier New', Courier, monospace; /* Typewriter-style font */
+}
+
+/* Container styles */
+.container {
+    text-align: center; /* Center text */
+}
