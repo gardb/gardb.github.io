@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>bgard.net</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <section class="wrapper">
-    <div class="top">bg</div>
-    <div class="bottom" aria-hidden="true">bg</div>
-  </section>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="scene">
+      <div class="logo-frame">
+        <div class="hud hud--left" aria-hidden="true" id="hud-time">
+          <span class="part">24</span><span class="colon">:</span><span class="part">00</span><span class="colon">:</span><span class="part">00</span>
+        </div>
+        <div class="hud hud--right hud--right-top" aria-hidden="true" id="hud-daymonth">
+          <span class="part">DAY</span><span class="colon">:</span><span class="part">MONTH</span>
+        </div>
+        <div class="hud hud--right" aria-hidden="true" id="hud-date">
+          <span class="part">0000</span><span class="colon">:</span><span class="part">00</span><span class="colon">:</span><span class="part">00</span>
+        </div>
+
+        <svg
+          class="logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1024 1024"
+          role="img"
+          aria-label="BG"
+        >
+          <g
+            transform="translate(-48 -24)"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="80"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M384 112 V500" />
+            <circle cx="560" cy="500" r="176" />
+            <path d="M736 500 V784" />
+            <path d="M736 784 A176 176 0 0 1 560 960 A176 176 0 0 1 384 784" />
+          </g>
+        </svg>
+      </div>
+    </main>
+    <script src="clock.js" defer></script>
+  </body>
 </html>
