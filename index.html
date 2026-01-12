@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>bgard.net</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -18,8 +12,59 @@
         <div class="hud hud--left" aria-hidden="true" id="hud-time">
           <span class="part">24</span><span class="colon">:</span><span class="part">00</span><span class="colon">:</span><span class="part">00</span>
         </div>
+        <div class="status" id="status">
+          <button class="status__button" type="button" aria-label="Project status">
+            <span class="status__signal" aria-hidden="true"></span>
+          </button>
+          <div class="status__popover" aria-label="Current projects">
+            <a class="status__project" href="https://baselines.foo/" target="_blank" rel="noreferrer" aria-label="Baselines">
+              <span class="status__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true" focusable="false">
+                  <defs>
+                    <radialGradient id="ringGlow" cx="50%" cy="50%" r="60%">
+                      <stop offset="0%" stop-color="rgba(255,255,255,0.14)" />
+                      <stop offset="70%" stop-color="rgba(255,255,255,0.04)" />
+                      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                    </radialGradient>
+                  </defs>
+
+                  <circle cx="15" cy="15" r="13.5" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2" />
+                  <circle cx="15" cy="15" r="9.6" fill="url(#ringGlow)" stroke="rgba(255,255,255,0.16)" stroke-width="1.0" />
+                  <circle cx="15" cy="15" r="6.2" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.0" />
+                </svg>
+              </span>
+            </a>
+            <a class="status__project" href="https://brgrd.github.io/remarkable/" target="_blank" rel="noreferrer" aria-label="Remarkable">
+              <span class="status__icon" aria-hidden="true">
+                <svg class="status__hash" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <text x="12" y="12" text-anchor="middle" dominant-baseline="central">#</text>
+                </svg>
+              </span>
+            </a>
+            <a class="status__project" href="https://brgrd.github.io/pears/" target="_blank" rel="noreferrer" aria-label="Pears">
+              <span class="status__icon" aria-hidden="true">
+                <svg class="pear-logo-small" viewBox="0 0 290 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <circle cx="145" cy="145" r="145" fill="rgba(255,255,255,0.04)" />
+                  <g>
+                    <path fill="rgba(255,255,255,0.24)"
+                      d="M231.721,1.366c0,0,7.682,43.532-17.07,68.284   c-24.754,24.753-68.285,17.072-68.285,17.072s-8.535-42.678,17.072-68.284C189.043-7.17,231.721,1.366,231.721,1.366z" />
+                    <path fill="rgba(255,255,255,0.22)"
+                      d="M160,75c0,8.284-6.716,15-15,15l0,0c-8.284,0-15-6.716-15-15V25   c0-8.284,6.716-15,15-15l0,0c8.284,0,15,6.716,15,15V75z" />
+                    <path fill="rgba(255,255,255,0.20)"
+                      d="M205,147.977V120c0-33.137-26.863-60-60-60s-60,26.863-60,60v27.977   C63.642,162.646,50,184.98,50,210c0,44.183,42.532,80,95,80c52.467,0,95-35.817,95-80C240,184.98,226.357,162.647,205,147.977z" />
+                    <path fill="rgba(255,255,255,0.13)"
+                      d="M145,60c-33.137,0-60,26.863-60,60v27.977C63.642,162.646,50,184.98,50,210   c0,44.183,42.532,80,95,80C145,207,145,156,145,60z" />
+                  </g>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="hud hud--right hud--top" aria-hidden="true" id="hud-count">
+          <span class="part">(207)</span>
+        </div>
         <div class="hud hud--right hud--right-top" aria-hidden="true" id="hud-daymonth">
-          <span class="part">DAY</span><span class="colon">:</span><span class="part">MONTH</span>
+          <span class="part">MONTH</span><span class="colon">:</span><span class="part">DAY</span>
         </div>
         <div class="hud hud--right" aria-hidden="true" id="hud-date">
           <span class="part">0000</span><span class="colon">:</span><span class="part">00</span><span class="colon">:</span><span class="part">00</span>

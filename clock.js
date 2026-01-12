@@ -72,7 +72,7 @@ function formatRemainingTimeParts(now) {
 function formatDayMonthParts(now) {
   const weekday = WEEKDAY_FORMATTER.format(now).toLocaleUpperCase(LOCALE);
   const month = MONTH_FORMATTER.format(now).toLocaleUpperCase(LOCALE);
-  return [weekday, month];
+  return [month, weekday];
 }
 
 const setTime = createHudUpdater(document.getElementById("hud-time"), 3);
